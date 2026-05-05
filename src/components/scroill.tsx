@@ -21,7 +21,7 @@ export default function CallToAction() {
         </p>
 
         <Link to={'/apply'}>
-        <button
+        <button 
           onClick={scrollToApply}
           className="relative bg-white text-green-800 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-100 transition duration-300 animate-pulse"
         >
